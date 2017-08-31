@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Make Weibo Readable Again",
+  "description": "屏蔽微博广告, 推广等辣眼睛的东西, 还我一个清爽的浏览环境.",
+  "version": "1.1",
+
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "icons": {
+    "128": "icon.png" 
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "storage", "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["background.js"]
+    }
+  ]
+}
